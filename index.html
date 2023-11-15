@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cypress Clothing Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/colortheme.css">
+<link rel="icon" type="image/x-icon" href="assets/icon.png">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+.banner_size {
+	width: 200px;
+}
+.logo-size {
+	width: 100px;
+}
+video {
+	width: 100%;
+	height: 500px;
+	margin: 0 auto;
+
+</style>
+</head>
+<body class="w3-content" style="max-width:98%">
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:135px; height:auto;" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding w3-theme-d2" style="height:125px;">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><img src="assets/logo.png" class="logo-size"></h3>
+  </div>
+  
+  <!-- Sidebar Content -->
+  <div class="w3-padding-32 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-green">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-green">Products</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-green">About Us</a>
+  </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-theme-d2">
+  <div class="w3-bar-item"><img src="assets/logo.png" class="logo-size"></div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<div class="w3-main" style="margin-left:135px;width:auto;">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:10px;"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-theme-d2 w3-xlarge">
+    <p class="w3-left"><img src="assets/banner_2.png" class="banner_size"></p>
+    <p class="w3-right">
+		<a class="fa fa-home w3-margin-right" href="index.html"></a>
+		<a class="fa fa-shopping-cart w3-margin-right"></a>
+		<a class="fa fa-search"></a>
+    </p>
+  </header>
+
+  <!-- Video header -->
+  <div class="w3-display-container w3-container w3-padding-24 w3-theme-l1">
+		<video autoplay muted loop>
+        <source src="assets/video/home_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+
+<!-- Video Text -->
+    <div class="w3-display-middle w3-text-white" style="padding:24px 0px">
+      <h1 class="w3-big w3-hide-small" style="font-weight:1000; font-size:55px;">Welcome to CYPRESS</h1>
+      <p class="w3-display-bottom"><a href="#jeans" class="w3-button w3-theme-d2 w3-padding-large w3-large">SHOP NOW</a></p>
+    </div>
+  </div>
+  
+  <!-- Panel at the bottom -->
+	<div class="w3-panel w3-card w3-padding-32">
+		<h1><b>Why shop at Cypress?</b></h1>
+		<p style="font-size:25px; text-indent:100px; margin:25px;" align="justify">CYPRESS online shop is your go-to source for styles influenced by the latest fashions with a special flair you won't find anywhere else. Our selection is wide, varied and always fresh. You'll discover something new every time you shop with us. With so many options to choose from, you're sure to come across something you'll love! Our vision is fast-paced, forward-thinking and fashion-centered at its core; All of our pieces reflect these ideals. We invite you to browse our latest collection to find just the outfit you've been looking for. Shop with us today to look good and feel good from the inside out.</p>
+	</div>
+
+  <!-- Footer -->
+  <div class="w3-container w3-theme-d2 w3-padding-32" id="footer">
+    <h1>Subscribe</h1>
+    <p>To get special offers and VIP treatment:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+  </div>
+
+  <!-- End page content -->
+</div>
+
+<script>
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+document.getElementById("myBtn").click();
+
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
